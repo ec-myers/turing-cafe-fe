@@ -8,10 +8,10 @@
 
 .cancel-btn {
   background: #2c8080;
-  color: #ffffff;
-  width: 75%;
-  margin: 5px;
-  height: 25px;
   border-radius: 3px;
+  color: #ffffff;
   font-size: 14px;
+  height: 30px;
+  margin-bottom: 10px;
+  width: 75%;
 }
