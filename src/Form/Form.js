@@ -8,7 +8,7 @@ class Form extends Component {
       name: '',
       date: '',
       time: '',
-      numGuests: ''
+      number: ''
     }
   }
 
@@ -18,10 +18,11 @@ class Form extends Component {
 
   makeReservation = (e) => {
     let newReservation = {
+      id: Date.now(),
       name: this.state.name,
       date: this.state.date,
       time: this.state.time,
-      numGuests: this.state.numGuests
+      number: parseInt(this.state.number)
     }
     this.props.addReservation(newReservation);
   }
@@ -32,7 +33,7 @@ class Form extends Component {
         <input type='text' placeholder='Name' name='name' value={this.state.name}onChange={this.handleChange}></input>
         <input type='text' placeholder='Date' name='date' value={this.state.date} onChange={this.handleChange}></input>
         <input type='text' placeholder='Time' name='time' value={this.state.time} onChange={this.handleChange}></input>
-        <input type='text' placeholder='Number of guests' name='numGuests' value={this.state.numGuests} onChange={this.handleChange}></input>
+        <input type='text' placeholder='Number of guests' name='number' value={this.state.number} onChange={this.handleChange}></input>
         <button type='button' onClick={this.makeReservation}>Make Reservation</button>
       </form>
     )
