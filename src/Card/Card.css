@@ -1,3 +1,17 @@
 .Card {
   background: #ffffff;
+  border-radius: 8px;
+  border: 4px solid #2c8080;
+  color: #2c8080;
+  width: 300px;
+}
+
+.cancel-btn {
+  background: #2c8080;
+  border-radius: 3px;
+  color: #ffffff;
+  font-size: 14px;
+  height: 30px;
+  margin-bottom: 10px;
+  width: 75%;
 }

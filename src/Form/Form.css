@@ -1,0 +1,23 @@
+.Form {
+    align-items: center;
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+input {
+  height: 25px;
+  width: 200px;
+}
+
+::placeholder {
+  font-size: 14px;
+}
+
+.submit-btn {
+  background: #2c8080;
+  border-radius: 3px;
+  color: #ffffff;
+  font-size: 14px;
+  height: 30px;
+}
