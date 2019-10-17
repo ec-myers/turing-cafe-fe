@@ -19,6 +19,7 @@ class App extends Component {
   }
 
   addReservation = (newReservation) => {
+    this.setState({ reservations: [...this.state.reservations, newReservation]});
     postReservation(newReservation)
     .then(data => this.setState({ reservations: data }))
   }
