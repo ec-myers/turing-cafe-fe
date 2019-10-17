@@ -12,6 +12,7 @@ exports[`Card should match the snapshot 1`] = `
   </p>
   <p>
     7:30
+     pm
   </p>
   <p>
     Number of guests: 
@@ -19,6 +20,7 @@ exports[`Card should match the snapshot 1`] = `
   </p>
   <button
     className="cancel-btn"
+    onClick={[Function]}
     type="button"
   >
     Cancel
