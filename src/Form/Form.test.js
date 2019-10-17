@@ -24,4 +24,12 @@ describe ('Form', () => {
 
     expect(wrapper.state('name')).toEqual(expected);
   });
+
+  it('should run makeReservation when button is clicked', () => {
+    wrapper.instance().makeReservation = jest.fn();
+    wrapper.instance().forceUpdate();
+    wrapper.find('button').simulate('click')
+ 
+    expect(wrapper.instance().makeReservation).toHaveBeenCalled();
+  });
 });
