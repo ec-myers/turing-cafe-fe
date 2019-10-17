@@ -25,6 +25,16 @@ class Form extends Component {
       number: this.state.number
     }
     this.props.addReservation(newReservation);
+    this.resetInputs();
+  }
+
+  resetInputs = () => {
+    this.setState({
+      name: '',
+      date: '',
+      time: '',
+      number: 6
+    });
   }
 
   render() {

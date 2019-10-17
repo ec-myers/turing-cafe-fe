@@ -8,6 +8,7 @@
 input {
   height: 25px;
   width: 200px;
+  font-size: 14px;
 }
 
 ::placeholder {
