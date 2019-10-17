@@ -8,7 +8,7 @@ class Form extends Component {
       name: '',
       date: '',
       time: '',
-      number: ''
+      number: 6
     }
   }
 
@@ -22,7 +22,7 @@ class Form extends Component {
       name: this.state.name,
       date: this.state.date,
       time: this.state.time,
-      number: parseInt(this.state.number)
+      number: this.state.number
     }
     this.props.addReservation(newReservation);
   }

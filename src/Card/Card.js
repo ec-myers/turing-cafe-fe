@@ -9,7 +9,7 @@ const Card = (props) => {
       <p>{props.date}</p>
       <p>{props.time}</p>
       <p>Number of guests: {props.number}</p>
-      <button type='button' className='cancel-btn'>Cancel</button>
+      <button type='button' className='cancel-btn' onClick={() => props.cancelReservation(props.id)}>Cancel</button>
     </div>
   )
 } 
