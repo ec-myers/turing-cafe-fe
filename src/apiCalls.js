@@ -14,6 +14,5 @@ export const postReservation = (newReservation) => {
 
   return fetch('http://localhost:3001/api/v1/reservations	', options)
     .then(response => response.json())
-    .catch(error => console.log(error));
 }
  
