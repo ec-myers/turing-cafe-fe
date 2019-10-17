@@ -5,7 +5,7 @@ import './Container.css';
 const Container = ({ reservations }) => {
   return (
     reservations.map(reservation => {
-      return <Card reservation={reservation} name={reservation.name} date={reservation.date} time={reservation.time} number={reservation.number}/>
+      return <Card key={reservation.id} id={reservation.id} name={reservation.name} date={reservation.date} time={reservation.time} number={reservation.number}/>
     })
   )
 }

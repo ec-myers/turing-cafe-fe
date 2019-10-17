@@ -1,5 +1,6 @@
-.Container {
-  /* display: grid;
-  grid-template-rows: repeat(5);
-  grid-gap: 20px; */
+.resy-container {
+    padding: 35px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
 }
