@@ -16,6 +16,15 @@ class Form extends Component {
     this.setState({[e.target.name]: e.target.value})
   }
 
+  makeReservation = (e) => {
+    let newReservation = {
+      name: this.state.name,
+      date: this.state.date,
+      time: this.state.time,
+      numGuests: this.state.numGuests
+    }
+    this.props.addReservation(newReservation);
+  }
 
   render() {
     return(
