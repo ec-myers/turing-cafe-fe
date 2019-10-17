@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import Container from '../Container/Container';
+import Form from '../Form/Form';
+import { getReservations, postReservation } from '../apiCalls';
 
 class App extends Component {
   constructor() {
@@ -11,19 +13,25 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:3001/api/v1/reservations	')
-    .then(res => res.json())
+    getReservations()
+    .then(data => this.setState({ reservations: data }))
+    .catch(error => console.log(error))
+  }
+
+  addReservation = (newReservation) => {
+    postReservation(newReservation)
     .then(data => this.setState({ reservations: data }))
   }
+
   render() {
     return (
       <div className="App">
         <h1 className='app-title'>Turing Cafe Reservations</h1>
         <div className='resy-form'>
-
+          <Form addReservation={this.addReservation}/>
         </div>
         <div className='resy-container'>
-          <Container reservations={this.state.reservations}/>
+          <Container className='Container' reservations={this.state.reservations} />
         </div>
       </div>
     )

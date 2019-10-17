@@ -1,10 +1,11 @@
 import React from 'react';
+import './Card.css';
 
 const Card = ({reservation}) => {
   const { id, name, date, time, number} = reservation;
 
   return (
-    <div>
+    <div className='Card'>
       <h2>{name}</h2>
       <p>{date}</p>
       <p>{time}</p>
